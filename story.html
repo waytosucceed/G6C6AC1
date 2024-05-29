@@ -1,0 +1,225 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.28vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Adjective and it’s types</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;"> 
+
+
+
+                    Imagine you are describing your favourite superhero to a friend who
+                    has never heard of them before. <br><br>
+
+                    What words would you use to paint a picture of this amazing character
+                    in their mind? <br> <br>
+                
+                    Would you say they are strong? Brave? Powerful? <br> Those are all
+                    adjectives! 
+
+                    
+
+
+                  
+
+
+
+
+
+                    
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+       
+        </div>
+    
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg",];
+
+            var para=[ "<span style='color: blue;'>Adjectives are like superpower words that describe nouns (person,place, thing, or idea). Not only nouns but adjectives also describe pronouns. </span><br> <br> They add colour, detail, and excitement to our language, allowing us to express ourselves more vividly.<br> <br>Today we will  learn about adjectives and their types.<br> <br> Such as “Qualitative Adjectives”, “Quantitative Adjectives”, “Adjectives of numbers”, “Demonstrative Adjectives”, “Interrogative Adjectives” and “Possessive Adjectives”. <br> <br> Let us now read an essay on pollution.",
+
+
+                      "Pollution poses an immense threat to our planet's fragile ecosystems and the health of countless living beings. This multifaceted issue manifests in numerous forms, each more concerning than the last. Air pollution, with its noxious clouds of particulate matter and gaseous contaminants, blankets many urban centres in a thick, hazardous haze. Water pollution transforms once-pristine rivers, lakes, and oceans into toxic wastelands, devoid of aquatic life. Soil contamination renders vast tracts of arable land infertile while jeopardising the quality of our crops.",
+                   
+                      "Can you think of any other qualitative adjectives we could use to describe pollution and its effects from this paragraph?<br> <br> Well, there are a lot like:<br>● <i> “<u>Noxious</u>”</i>: It tells us about the harmful or poisonous quality of the air pollution clouds.<br>● <i> “<u>Hazardous</u>”</i>: This adjective highlights the dangerous nature of the haze caused by air pollution.<br>●  <i>“<u>Pristine</u>”</i>: It describes the once clean and unspoiled condition of rivers, lakes, and oceans before water pollution.<br> <br> All of these words describe the quality of pollution and thus they all are <span style='color: blueviolet;'> “Qualitative adjectives”</span>.",
+
+                      "Can you think of any other quantitative adjectives we could use to describe the amounts or quantities related to pollution from the given paragraph? <br> <br>These adjectives are:<br> ● <i>'<u>Immense</u>'</i> - This adjective tells us about the vast or enormous threat posed by pollution. <br> ● <i>'<u>Numerous</u>'</i> - This adjective indicates that pollution has many different forms. <br> ● <i>'<u>Many</u>'</i> - It suggests that a large number of urban centres are affected by the haze caused by air pollution. <br><br>  Well now that you guys have an understanding of <span style='color: blueviolet;'> “qualitative” </span> and <span style='color: blueviolet;'> “quantitative” </span> adjectives, it’s time to move ahead in our reading session.....",
+
+                      "The culprits behind this environmental Crisis are legion. Unchecked industrial activities belch out innumerable pollutants into the air and waterways. Vehicle emissions from millions of cars, trucks, and buses create a continuous smell of nitrogen oxides and carbon monoxide. Widespread agricultural practices introduce a plethora of insecticides, fertilizers, and herbicides into the soil and groundwater. Rampant deforestation eliminates nature's prime buffer against many airborne toxins.",
+
+                      "This trifecta of polluted realms - land, water, and air - poses severe risks to all life on Earth. Which respiratory illnesses do you think have skyrocketed in recent decades due to poor air quality? What percentage of marine life has perished in the world's most contaminated bodies of water? How many once-fertile regions have been rendered barren wastelands by man-made pollution? These sobering statistics illustrate the devastating toll pollution has wrought.",
+
+                      "In the given sentence there is the term “this”, do you know kids, “this” is also an adjective. <br> <br> In the paragraph 'This' is used twice to refer to the 'environmental Crisis' and the 'trifecta of polluted realms.'' <br> <br> The term “this” is known as a “Demonstrative adjective”.<br> <br> <span style='color: blue;'>  Demonstrative Adjectives </span> point out or identify specific nouns. A demonstrative adjective is an adjective used to specifically describe the position of something or someone in space or time.",
+
+                      "Can you identify any other demonstrative adjectives in the paragraph?",
+                       
+                      "There is one more demonstrative adjective in the sentence. <br> “ <span style='color: blue;'>  These sobering statistics illustrate the devastating toll pollution has wrought.</span>” <br> <br> <span style='color: blueviolet;font-style:italic;'> “These” </span> is also a demonstrative adjective as it is used to refer to the 'sobering statistics' mentioned.",
+
+                      "Do you know terms like “ <span style='font-weight:bolder;'> Which</span>” and “ <span style='font-weight:bolder;'>What</span>” can also act like adjectives and are known as “Interrogative adjectives”. <br> <br> <span style='color:blueviolet;'>“Interrogative Adjectives”</span> are adjectives used to ask questions. <br> <br>An interrogative adjective, also known as an interrogative determiner,is an adjective that modifies a noun by asking a question.<br> <br> The interrogative adjectives in English are <i style='color: blue;'> ‘what’, ‘which’,</i>  and <i style='color: blue;'> ‘whose’.</i> <br> <br>Now, let's move to our last segment in the essay. Let’s read.....",
+
+                      "Addressing this multifarious issue requires a concerted, multinational effort involving sweeping legislation, sustainable industrial and agricultural reforms, investment in renewable energy sources, and a collective determination to undo the willful negligence of past generations. Only through such comprehensive measures can we hope to bequeath our children and grandchildren a world as resplendently healthy as the one we squandered.",
+
+                      "In this sentence, there is a hidden adjective which shows ownership or possession. <br> <br>  And that adjective is  <span style='color: blue;font-style:italic;'> “our”</span>, it is used twice to refer to 'our children and grandchildren' and 'the one we squandered,' indicating possession by us. <br> <br> Because the word  <span style='font-weight:bolder;font-style:italic;'> “our” </span> shows possession, it is known as a possessive adjective.<br> <br>  <span style='color: blueviolet;'> “Possessive Adjectives” </span> are adjectives that show ownership or possession of something.<br><br>  <span style='color: blue;'><u> For example</u></span>: 'my,' 'your,' 'his,' 'her,' 'its,' or 'their'.",
+
+                      "The word ' <span style='font-weight:bolder;'> once</span>' acts as an adjective of a number, indicating a single instance or occurrence in the past.<br> <br>An adjective of number is a type of adjective that indicates a specific number or an inexact quantity. These adjectives help modify nouns by providing information about their numerical values or quantities.",
+
+                      "There are two main types of adjectives of number: <br> <br> <span style='color: blueviolet;'> Cardinal adjectives</span>: These adjectives indicate a precise or exact number. <i><u> Examples include:</u></i> One Book, Two Cars, Five Friends, etc. <br> <br> <span style='color: blueviolet;'>  Ordinal adjectives</span>: These adjectives indicate the position or order of something in a sequence.<br><i><u> Examples include:</u></i> The first prize, The Third attempt, The fifteenth century, etc. ",
+
+                    ]
+            
+
+
+
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.fontSize="18px"
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "Pollution: A Pervasive and Pernicious Problem";
+                    document.getElementById("story").innerHTML = "<u> <span style='color: blueviolet;'> Important note:</span></u> <br><br> In addition to cardinal and ordinal adjectives, there are also <span style='color: blue;font-style:italic;'> indefinite adjectives </span> of number that express an inexact or imprecise quantity. <br> Some examples are: Several books, Many people, Few opportunities, A lot of trees, etc.";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Pollution: A Pervasive and Pernicious Problem"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Adjective and it’s types"
+                    document.getElementById("story").innerHTML = "Imagine you are describing your favourite superhero to a friend who has never heard of them before. <br><br> What words would you use to paint a picture of this amazing character  in their mind? <br> <br> Would you say they are strong? Brave? Powerful? <br> Those are all   adjectives! "
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="Pollution: A Pervasive and Pernicious Problem"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
